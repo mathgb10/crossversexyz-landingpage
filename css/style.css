@@ -1,0 +1,90 @@
+/* Reset e Definições Globais */
+*{
+    margin: 0;
+    top: 0;
+    left: 0;
+    padding: 0;
+    
+    font-family: "Pixelify Sans", sans-serif;;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: 0.4s all ease-in;
+}
+/* Variaveis (só tá assim pq fica fácil de fazer outro tema dps) */
+:root{
+    --corNav: black;
+    --corFundo: #0A0A0F;
+
+    --corTexto: white;
+    --corLinks: #6C2DC7;
+    --corDestaque: rgb(69, 1, 255);
+    
+    /* Peguei essa sombra pronta em um site com vários exemplos (achei bonita)*/
+    --sombra: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    --corBordas: gray;
+    
+    --arredondamento: 1rem;
+    --padraoBorda: 2px solid;
+    --hoverBtn: rgba(70, 70, 70, 0.1);
+}
+body{
+    background: var(--corFundo);
+    height: 100vh;
+}
+/* Barra de Navegação */
+.navbar{
+    position: fixed;
+    width: 100%;
+    padding: 1rem;
+    background: var(--corNav);
+    display: flex;
+    align-items: center;
+    /* Mexi tanto que esse space-around aqui n precisava */
+    justify-content: space-around;
+
+    max-height: 120px;
+}
+.navbar-img{
+    display: flex;
+    justify-content: center;
+    width: 20%;
+}
+.navbar-img img{
+    width: 80px;
+}
+.navbar-links{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+.navbar-links a{
+    text-decoration: none;
+    color: var(--corLinks);
+    font-size: 17px;
+}
+.navbar-links a:hover{
+    color: var(--corDestaque);
+}
+.navbar-cfg{
+    display: flex;
+    justify-content: center;
+    width: 20%;
+}
+.navbar-cfg button{
+    padding: 1rem;
+    font-size: 2rem;
+    color: var(--corLinks);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+.navbar-cfg button:hover{
+    background: var(--hoverBtn);
+    color: var(--corDestaque);
+}
+/* Conteudo Principal */
+.conteudo-principal{
+    width: 100%;
+    margin-top: 130px;
+}
