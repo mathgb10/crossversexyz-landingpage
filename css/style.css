@@ -8,7 +8,7 @@
     font-family: "Pixelify Sans", sans-serif;;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    transition: 0.4s all ease-in;
+    transition: 0.4s all ease-in-out;
 }
 /* Variaveis (só tá assim pq fica fácil de fazer outro tema dps) */
 :root{
@@ -20,8 +20,8 @@
     --corDestaque: rgb(69, 1, 255);
     
     /* Peguei essa sombra pronta em um site com vários exemplos (achei bonita)*/
-    --sombra: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-    --corBordas: gray;
+    --sombra: 0 4px 12px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.08);
+    --corBordas: rgb(111, 0, 255);
     
     --arredondamento: 1rem;
     --padraoBorda: 2px solid;
@@ -29,7 +29,9 @@
 }
 body{
     background: var(--corFundo);
+    width: 100%;
     height: 100vh;
+    color: var(--corTexto);
 }
 /* Barra de Navegação */
 .navbar{
@@ -42,6 +44,7 @@ body{
     /* Mexi tanto que esse space-around aqui n precisava */
     justify-content: space-around;
 
+    z-index: 2;
     max-height: 120px;
 }
 .navbar-img{
@@ -85,6 +88,55 @@ body{
 }
 /* Conteudo Principal */
 .conteudo-principal{
-    width: 100%;
+    width: 95%;
     margin-top: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.caixa-colab{
+    width: 50%;
+    border-radius: var(--arredondamento);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.caixa{
+    width: 40%;
+    min-width: 200px;
+    background: var(--corNav);
+    border: var(--padraoBorda) var(--corBordas);
+    border-radius: var(--arredondamento);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 40px;
+    cursor: pointer;
+    box-shadow: var(--sombra);
+    z-index: 1;
+}
+.caixa-img{
+    width: 95%;
+}
+.caixa-img img{
+    width: 100%;
+    border-radius: var(--arredondamento);
+}
+.caixa:hover{
+    scale: 1.1;
+}
+.caixa-integrantes{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* Tava dando problema para fazer em js dai aqui foi então larguei mão de adicionar um evento no js */
+.caixa:hover .caixa-integrantes{
+    display: flex;
 }
