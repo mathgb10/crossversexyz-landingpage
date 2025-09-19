@@ -32,6 +32,9 @@ body{
     width: 100%;
     height: 100vh;
     color: var(--corTexto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 /* Barra de Navegação */
 .navbar{
@@ -96,39 +99,51 @@ body{
     align-items: center;
 }
 .caixa-colab{
-    width: 50%;
+    width: 60%;
     border-radius: var(--arredondamento);
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    justify-items: center;
+    gap: 70px;
 }
 .caixa{
-    width: 40%;
+    width: 90%;
+    max-width: 350px;
     min-width: 200px;
+    /* height: 370px; */
     background: var(--corNav);
-    border: var(--padraoBorda) var(--corBordas);
+    border: var(--padraoBorda) var(--corLinks);
     border-radius: var(--arredondamento);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 1rem;
-    margin: 40px;
+    margin-top: 5%;
     cursor: pointer;
     box-shadow: var(--sombra);
     z-index: 1;
+    /* overflow: auto; */
+    gap: 10px;
 }
 .caixa-img{
     width: 95%;
+    height: 300px;
 }
 .caixa-img img{
     width: 100%;
+    height: 100%;
     border-radius: var(--arredondamento);
+}
+.caixa .caixa-txt h3{
+    color: var(--corLinks);
 }
 .caixa:hover{
     scale: 1.1;
+    border-color: var(--corDestaque);
 }
 .caixa-integrantes{
     display: none;
@@ -139,4 +154,32 @@ body{
 /* Tava dando problema para fazer em js dai aqui foi então larguei mão de adicionar um evento no js */
 .caixa:hover .caixa-integrantes{
     display: flex;
+}
+
+.caixa-game{
+    width: 25%;
+}
+
+
+/* Footer */
+.rodape{
+    width: 95%;
+    padding: 1rem;
+    border-radius: var(--arredondamento);
+    background: var(--corNav);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.rodape-img img{
+    width: 150px;
+    border-radius: var(--arredondamento);
+}
+.rodape-txt a{
+    text-decoration: none;
+    color: var(--corLinks);
+}
+.rodape-txt a:hover{
+    color: var(--corDestaque);
+    text-decoration: underline;
 }
