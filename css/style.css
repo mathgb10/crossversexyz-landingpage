@@ -98,6 +98,15 @@ body{
     justify-content: center;
     align-items: center;
 }
+.conteudo-principal header{
+    margin-top: 10%;
+}
+.caixa-apresentacao{
+    margin-top: 5%;
+}
+.caixa-mecanicas{
+    margin-top: 5%;
+}
 .caixa-colab{
     width: 60%;
     border-radius: var(--arredondamento);
@@ -108,6 +117,7 @@ body{
     justify-content: space-around;
     justify-items: center;
     gap: 70px;
+    margin-top: 5%;
 }
 .caixa{
     width: 90%;
@@ -122,7 +132,6 @@ body{
     align-items: center;
     flex-direction: column;
     padding: 1rem;
-    margin-top: 5%;
     cursor: pointer;
     box-shadow: var(--sombra);
     z-index: 1;
@@ -155,14 +164,39 @@ body{
 .caixa:hover .caixa-integrantes{
     display: flex;
 }
-
+.caixa-proj{
+    width: 100%;
+    margin-top: 10%;
+}
 .caixa-game{
-    width: 25%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
 }
 
+.caixa-game .caixa-game-img img{
+    width: 75%;
+}
+
+.caixa-btn button{
+    width: 150px;
+    height: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--corTexto);
+    background: var(--corLinks);
+    border-radius: var(--arredondamento);
+    border: 2px solid var(--corDestaque);
+    cursor: pointer;
+}
+.caixa-btn button:hover{
+    border-color: var(--corLinks);
+    background: var(--corDestaque);
+}
 
 /* Footer */
 .rodape{
+    margin-top: 5%;
     width: 95%;
     padding: 1rem;
     border-radius: var(--arredondamento);
